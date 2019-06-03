@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :blogs do
     member do
       get :toggle_status
@@ -13,4 +14,3 @@ Rails.application.routes.draw do
   get 'contact', to:'pages#contact'
   root to: 'pages#home'
 end
-#this is a test
